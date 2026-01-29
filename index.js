@@ -59,7 +59,7 @@ await new Promise(resolve => setTimeout(resolve, 5000));
         if (m) men = Number(m[1]);
       }
     });
-
+    console.log(`womens ke kapde : ${women}, mens ke kapde : ${men}`);
     return { women, men };
   });
 
@@ -100,4 +100,6 @@ async function checkCounts() {
   } catch (err) {
   }
 }
+
+console.log("🤖bot is working...");
 cron.schedule("*/2 * * * *", checkCounts);
