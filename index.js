@@ -90,15 +90,18 @@ async function checkCounts() {
     // 📩 Send alert only if needed
     if (msg) {
       await sendTelegram(`🚨 PRODUCT MANGALO GUYZZZZZZ\n\n${msg}`);
+    }else{
+        console.log("ℹ️ No significant change");
     }
 
     // 🧾 ALWAYS update JSON (increase OR decrease)
     if (women !== old.women || men !== old.men) {
       saveNew({ women, men });
-      console.log("🧾 data.json updated:", { women, men });
     }
 
   } catch (err) {
   }
 }
+
 cron.schedule("*/2 * * * *", checkCounts);
+console.log("🤖 Puppeteer SHEINVERSE monitor started...");
