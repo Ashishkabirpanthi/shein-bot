@@ -69,6 +69,7 @@ await new Promise(resolve => setTimeout(resolve, 5000));
 async function checkCounts() {
   try {
     const { women, men } = await scrapeCounts();
+    console.log(women, men);
 
     if (!women && !men) {
       return;
@@ -98,6 +99,7 @@ async function checkCounts() {
     }
 
   } catch (err) {
+    console.error("Error checking counts:", err.message);
   }
 }
 

@@ -1,24 +1,32 @@
 {
   "name": "shein-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/Ashishkabirpanthi/shein-bot#readme",
+  "bugs": {
+    "url": "https://github.com/Ashishkabirpanthi/shein-bot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashishkabirpanthi/shein-bot.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-   "engines": {
-    "node": "18.x"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "axios": "^1.13.4",
     "cheerio": "^1.2.0",
     "dotenv": "^17.2.3",
     "node-cron": "^4.2.1",
     "puppeteer": "^24.36.1"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
